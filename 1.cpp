@@ -38,7 +38,7 @@ int main() {
 
     // 判断是否需要关闭程序
     if (count == 0) {
-        MessageBox(NULL, "次数已用尽，程序即将关闭，qq群：362927795", "会员提醒", MB_OK);
+        MessageBox(NULL, "次数已用尽，程序即将关闭", "会员提醒", MB_OK);
         exit(0);
     } else {
         // 下载文件到USERPROFILE，并命名为1.cmd
