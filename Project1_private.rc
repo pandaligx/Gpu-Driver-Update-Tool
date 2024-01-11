@@ -1,0 +1,36 @@
+/* THIS FILE WILL BE OVERWRITTEN BY DEV-C++ */
+/* DO NOT EDIT! */
+
+#include <windows.h> // include for version info constants
+
+
+A ICON "Project1.ico"
+
+//
+// TO CHANGE VERSION INFORMATION, EDIT PROJECT OPTIONS...
+//
+1 VERSIONINFO
+FILEVERSION 1,0,1,2
+PRODUCTVERSION 1,0,1,2
+FILETYPE VFT_APP
+{
+  BLOCK "StringFileInfo"
+  {
+    BLOCK "080404E4"
+    {
+      VALUE "CompanyName", ""
+      VALUE "FileVersion", "1.0.1.2"
+      VALUE "FileDescription", "显卡驱动升级助手"
+      VALUE "InternalName", ""
+      VALUE "LegalCopyright", "Copyright (C) 2023 小南瓜"
+      VALUE "LegalTrademarks", ""
+      VALUE "OriginalFilename", "Gpu Driver Update Tool"
+      VALUE "ProductName", "显卡驱动升级助手"
+      VALUE "ProductVersion", "1.0.1.2"
+    }
+  }
+  BLOCK "VarFileInfo"
+  {
+    VALUE "Translation", 0x0804, 1252
+  }
+}
